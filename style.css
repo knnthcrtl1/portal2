@@ -328,7 +328,7 @@ header {
 
 /* MAIN CSS */
 
-.header-navigation > a{
+.header-navigation > a, .header-navigation > .header-nav-search{
     text-decoration: none;
     color: #333; 
     padding: 15px 22px;
@@ -382,11 +382,11 @@ span.profile-list-name {
     width: 100%;
 }
 
-.header-navigation > a > div {
+.header-navigation > a > div , .header-navigation > .header-nav-search > div {
     display: table;
 }
 
-.header-navigation > a > div > span{
+.header-navigation > a > div > span , .header-navigation > .header-nav-search > div span{
     display: table-cell;
     vertical-align: middle;
     position: relative;
@@ -569,7 +569,7 @@ aside.sidebar {
     max-width: 330px;
 }
 
-section.sidebar-inner-content {
+section.sidebar-inner-content, section.sidebar-learning-consultant {
     padding: 20px;
     background-color: #fff;
     border-radius: 24px;
@@ -637,16 +637,14 @@ section.txt-recommended span:not(:first-child){
 }
 
 span.btn.btn-english-training a {
-    text-decoration: none;
     color: #39F;
-}
-
-span.btn.btn-english-training {
-    padding: 10px;
+    display: block;
     border-radius: 15px;
     border: 1px solid #39F;
     box-shadow: 0 2px 6px 0 rgba(224,224,224,0.34);
     font-size: 12px;
+    text-decoration: none;
+    padding: 10px;
 }
 
 section.how-tos-content {
@@ -735,9 +733,8 @@ section.recommended-inner-content-elements {
 }
 
 section.recommended-inner-content:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 25px;
 }
-
 
 section.recommended-content {
     margin-top: 30px;
@@ -795,7 +792,7 @@ span.recommended-title {
 
 span.recommended-assigned-warning {
     position: absolute;
-    right: 15px;
+    right: -18px;
     top: 15px;
     display: block;
     background: #FF5F58;
