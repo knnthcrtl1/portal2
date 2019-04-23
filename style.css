@@ -1,17 +1,63 @@
 
 @media only screen and (min-width: 1920px){
+    section.how-tos-inner-content{
+        width: 33.33%;
+    }
+    section.recommended-inner-content-elements {
+        max-width: 300px;
+    }
     section.header-mobile-section, section.footer-mobile-section{
         display: none;
     }
+    .main-body{
+        margin-left: 40px;
+    }
+    section.how-tos-content > section:not(:nth-child(3n+3))  {
+        padding-right: 30px;
+    }
+    section.how-tos-load-more-container {
+        margin-bottom: 50px;
+    }
+    section.recommended-inner-content {
+        height: 170px;
+    }
+    
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1919px) {
+    section.how-tos-inner-content{
+        width: 33.33%;
+    }
+    section.recommended-inner-content-elements {
+        max-width: 300px;
+    }
     section.header-mobile-section, section.footer-mobile-section{
         display: none;
+    }
+    .main-body{
+        margin-left: 40px;
+    }
+    section.how-tos-content > section:not(:nth-child(3n+3))  {
+        padding-right: 30px;
+    }
+    section.how-tos-load-more-container {
+        margin-bottom: 50px;
+    }
+    section.recommended-inner-content {
+        height: 170px;
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1279px) {
+    section.how-tos-inner-content{
+        width: 50%;
+    }
+    section.how-tos-content > section:nth-child(odd)  {
+        padding-right: 30px;
+    }
+    aside.sidebar{
+        display: none;
+    }
     section.header-mobile-section .search-input-field{
         padding: 5px;
     }
@@ -86,6 +132,7 @@
         width: 100%;
         background-color: #ffff;
         box-shadow: 0 1px 12px 0 #E0E0E0;
+        z-index: 10;
     }
     .footer-mobile-navigation > div {
         display: table-cell;
@@ -123,6 +170,18 @@
 }
 
 @media only screen and (min-width: 1px) and (max-width: 599px) {
+    section.recommended-inner-content-elements {
+        max-width: 235px;
+    }
+    section.how-tos-load-more-container {
+        margin-bottom: 100px;
+    }
+    section.how-tos-content > section {
+        width: 100%;
+    }
+    aside.sidebar{
+        display: none;
+    }
     section.header-mobile-section .search-input-field{
         padding: 5px;
     }
@@ -195,6 +254,7 @@
         width: 100%;
         background-color: #ffff;
         box-shadow: 0 1px 12px 0 #E0E0E0;
+        z-index: 10;
     }
     .footer-mobile-navigation > div {
         display: table-cell;
@@ -594,7 +654,6 @@ span.profile-list-name {
 
 .main-body{
     width: 100%;
-    margin-left: 40px;
 }
 
 aside.sidebar {
@@ -686,17 +745,9 @@ section.how-tos-content {
     align-items: center;
 }
 
-section.how-tos-content > section {
-    width: 33.33%;
-}
-
-section.how-tos-content > section:not(:nth-child(3n+3))  {
-    padding-right: 30px;
-}
-
 section.how-tos-inner-content-elements {
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
     align-content: center;
     margin: 20px 0px;
@@ -744,7 +795,6 @@ section.recommended-content {
 
 section.recommended-inner-content {
     display: inline-block;
-    height: 170px;
     margin-bottom: 15px;
 }
 
@@ -752,7 +802,6 @@ section.recommended-inner-content-elements {
     display: flex;
     padding: 24px;
     border-radius: 8px;
-    max-width: 300px;
     height: 100%;
     position: relative;
     width: 100%;
@@ -835,7 +884,7 @@ span.recommended-assigned-warning {
     border-radius: 100%;
     font-size: 28px;
     font-weight: bold;
-    z-index: 999;
+    z-index: 5;
 }
 
 .homework-alert {
@@ -870,7 +919,6 @@ span.howtos-loadmore-btn {
 section.how-tos-load-more-container {
     display: block;
     margin-top: 100px;
-    margin-bottom: 50px;
     text-align: center;
 }
 
