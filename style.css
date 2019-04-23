@@ -328,7 +328,7 @@ header {
 
 /* MAIN CSS */
 
-.header-navigation > a, .header-navigation > .header-nav-search{
+.header-navigation > span{
     text-decoration: none;
     color: #333; 
     padding: 15px 22px;
@@ -352,11 +352,31 @@ header {
     padding-left: 10px;
 }
 
+.header-nav-live-lessons-dropdown {
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    list-style: none;
+    box-shadow: 0px 0px 3px 1px #e7e7e7;
+    transition: all 300ms ease-in-out;
+    visibility: hidden;
+    height: 0;
+    overflow-y: hidden;
+}
+
+.header-nav-live-lessons-dropdown ul li {
+    list-style: none;
+    font-size: 12px;
+    padding: 10px 20px;
+}
+
 .open{
     visibility: visible !important;
 }
 
-a.header-nav-profie .header-nav-dropdown {
+.header-nav-profie .header-nav-dropdown {
     height: 0;
     visibility: hidden;
     position: absolute;
@@ -374,7 +394,7 @@ span.profile-list-name {
     font-size: 13px;
 }
 
-.header-navigation a.active{
+.header-navigation span.active{
     color: #2f97ff;
 }
 
@@ -414,6 +434,7 @@ span.profile-list-name {
 
 .icon-bell-outline {
     font-size: 32px;
+    position: relative;
 }
 
 .search-input-field {
@@ -426,6 +447,10 @@ span.profile-list-name {
     font-weight: 300;
     outline: none;
 }
+.nav-link-inner > *{
+    display: table-cell;
+    vertical-align: middle;
+}
 
 .nav-link-inner-search {
     width: 100%;
@@ -434,6 +459,12 @@ span.profile-list-name {
 .nav-link-inner-profile{
     position: relative;
 }
+
+.nav-link-inner-profile > * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 
 .nav-link-inner-profile span:not(:first-child) {
     padding-left: 10px;
@@ -447,7 +478,7 @@ span.profile-list-name {
     line-height: 21px;
 }
 
-a.header-nav-bell {
+.header-nav-bell {
     color: #8A8A8A;
 }
 
@@ -527,7 +558,9 @@ a.header-nav-bell {
     text-align: center;
 }
 
-
+.cursor-pointer{
+   cursor: pointer;
+}
 
 
 
