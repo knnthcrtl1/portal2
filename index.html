@@ -18,25 +18,37 @@
             <div class="container">
                 <div class="row">
                     <div class="header-navigation">
-                        <a href="#" class="header-nav-home active">
+                        <span class="header-nav-home active cursor-pointer">
                             <div class="nav-link-inner">
                                 <span class="nav-icon icon-home"> </span>
                                 <span class="nav-txt"> Home</span>
                             </div>
-                        </a>
-                        <a href="#" class="header-nav-live">
+                        </span>
+                        <span class="header-nav-live cursor-pointer" id="navLiveLesson">
                             <div class="nav-link-inner">
                                 <span class="nav-icon icon-live-lesson"> </span>
                                 <span class="nav-txt">Live Lessons</span>
                             </div>
-                        </a>
-                        <a href="#" class="header-nav-class">
+                            <div class="header-nav-live-lessons-dropdown" id="liveLessonsDropDown">
+                                <ul class="ul-live-lessons-inner" id="liveLessonsInner">
+                                    <li>
+                                        <span>Scheduler</span>
+                                    </li>
+                                    <li>
+                                        <span>Lesson List</span>
+                                    </li>
+                                    <li>
+                                        <span>Workshop</span>
+                                    </li>
+                            </div>
+                        </span>
+                        <span class="header-nav-class cursor-pointer">
                             <div class="nav-link-inner">
                                 <span class="nav-icon icon-account-group"> </span>
                                 <span class="nav-txt">Classroom</span>
                             </div>
-                        </a>
-                        <span class="header-nav-search">
+                        </span>
+                        <span class="header-nav-search cursor-pointer">
                             <div class="nav-link-inner-search">
                                 <span class="nav-icon icon-search-icon"> </span>
                                 <span class="nav-txt-search">
@@ -45,15 +57,15 @@
                                 </span>
                             </div>
                         </span>
-                        <a href="#" class="header-nav-bell">
+                        <span class="header-nav-bell cursor-pointer">
                             <div class="nav-link-inner">
                                 <span class="nav-icon icon-bell-outline">
                                     <span class="icon-bell-warning"></span>
                                 </span>
                             </div>
-                        </a>
-                        <a href="#" class="header-nav-profie" id="headerNavProfile">
-                            <div class="nav-link-inner-profile">
+                        </span>
+                        <span class="header-nav-profie " id="headerNavProfile">
+                            <div class="nav-link-inner-profile cursor-pointer">
                                 <span class=""><img src="profile.png" alt="" /></span>
                                 <span class="nav-profile-name">Guillaume</span>
                                 <span class="nav-profile-chevron" id="navProfileChevron">▼</span>
@@ -100,7 +112,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -811,31 +823,67 @@
 
     <script>
 
-        var dropDown = false
+        //  Profile DropDown
+        function profileDropDown() {
+            var dropDown = false
 
-        var dropDownProfile = document.getElementById('headerNavDropDown');
+            var dropDownProfile = document.getElementById('headerNavDropDown');
 
-        var dropDownHeight = document.getElementById('innerHideList').clientHeight;
+            var dropDownHeight = document.getElementById('innerHideList').clientHeight;
 
-        var chevron = document.getElementById('navProfileChevron');
+            var chevron = document.getElementById('navProfileChevron');
 
-        document.getElementById('headerNavProfile').addEventListener('click', function (e) {
+            document.getElementById('headerNavProfile').addEventListener('click', function (e) {
 
-            e.preventDefault();
+                e.preventDefault();
 
-            if (!dropDown) {
-                dropDown = true;
-                chevron.innerText = "▲";
-                dropDownProfile.style.height = dropDownHeight + "px";
-                dropDownProfile.classList.add('open');
-            } else {
-                chevron.innerText = "▼";
-                dropDownProfile.style.height = "0px";
-                dropDownProfile.classList.remove('open');
-                dropDown = false
-            }
+                if (!dropDown) {
+                    dropDown = true;
+                    chevron.innerText = "▲";
+                    dropDownProfile.style.height = dropDownHeight + "px";
+                    dropDownProfile.classList.add('open');
+                } else {
+                    chevron.innerText = "▼";
+                    dropDownProfile.style.height = "0px";
+                    dropDownProfile.classList.remove('open');
+                    dropDown = false
+                }
 
-        })
+            })
+        }
+
+        profileDropDown();
+
+        // Live Lesson Dropdown
+        function liveLessonDropDown() {
+            var dropDown = false
+
+            var liveLessonsDropDown = document.getElementById('liveLessonsDropDown');
+
+            var liveLessonsInnerHeight = document.getElementById('liveLessonsInner').clientHeight;
+
+            var chevron = document.getElementById('navProfileChevron');
+
+            document.getElementById('navLiveLesson').addEventListener('click', function (e) {
+
+                e.preventDefault();
+
+                if (!dropDown) {
+                    dropDown = true;
+                    liveLessonsDropDown.style.height = liveLessonsInnerHeight + "px";
+                    liveLessonsDropDown.classList.add('open');
+                } else {
+                    liveLessonsDropDown.style.height = "0px";
+                    liveLessonsDropDown.classList.remove('open');
+                    dropDown = false
+                }
+
+            })
+        }
+
+        liveLessonDropDown();
+
+
 
     </script>
 
