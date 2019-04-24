@@ -209,9 +209,9 @@
 
                         <section class="recommended-container">
                             <section class="txt-recommended">
-                                <span><a href="#" role="button">Recommended</a></span>
-                                <span><a href="#" class="active" role="button">Assigned</a></span>
-                                <span><a href="#" role="button">Pinned</a></span>
+                                <span><a href="#" role="button" id="recommendedBtn">Recommended</a></span>
+                                <span><a href="#" class="active" role="button" id="assignedBtn">Assigned</a></span>
+                                <span><a href="#" role="button" id="pinnedBtn"> Pinned</a></span>
                             </section>
                             <setion>
                                 <span class="btn btn-english-training">
@@ -331,7 +331,7 @@
 
                         </section>
 
-                        <section class="recommended-container">
+                        <section class="recommended-container" style="margin-top: 40px;">
                             <section class="txt-recommended">
                                 <span><a href="#" class="active" role="button">Highlighted</a></span>
                                 <span class="recommended-homework-container">
@@ -883,6 +883,65 @@
 
         liveLessonDropDown();
 
+        // recommendedBtn
+
+        function recommendedBtn() {
+
+            var recommendedBtn = document.getElementById('recommendedBtn');
+            var assignedBtn = document.getElementById('assignedBtn');
+            var pinnedBtn = document.getElementById('pinnedBtn');
+
+            recommendedBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                var x = [...document.getElementsByClassName('recommeneded-inner-image')];
+                assignedBtn.classList.remove('active');
+                pinnedBtn.classList.remove('active');
+                this.classList.add('active');
+
+                x.map((val, index) => {
+
+                    val.style.display = "none";
+
+                });
+
+            });
+
+            assignedBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                var x = [...document.getElementsByClassName('recommeneded-inner-image')];
+                recommendedBtn.classList.remove('active');
+                pinnedBtn.classList.remove('active');
+                this.classList.add('active');
+
+                x.map((val, index) => {
+
+                    val.style.display = "block";
+
+                });
+
+            });
+
+            pinnedBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                var x = [...document.getElementsByClassName('recommeneded-inner-image')];
+                recommendedBtn.classList.remove('active');
+                assignedBtn.classList.remove('active');
+                this.classList.add('active');
+
+                x.map((val, index) => {
+
+                    val.style.display = "none";
+
+                });
+
+            });
+
+        }
+
+        recommendedBtn();
 
 
     </script>

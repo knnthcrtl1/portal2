@@ -1,5 +1,20 @@
 
 @media only screen and (min-width: 1920px){
+    .homework-alert {
+        top: -12px;
+    }
+    section.recommended-container {
+        margin-top: 40px;
+    }
+    section.reminder-container {
+        display: flex;
+    }
+section.recommended-content {
+    margin-top: 30px;
+}
+    section.txt-recommended span a {
+       font-size: 21px;
+    }
     section.how-tos-inner-content{
         width: 33.33%;
     }
@@ -25,6 +40,21 @@
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1919px) {
+    .homework-alert {
+        top: -12px;
+    }
+    section.recommended-container {
+        margin-top: 40px;
+    }
+    section.reminder-container {
+        display: flex;
+    }
+section.recommended-content {
+    margin-top: 30px;
+}
+    section.txt-recommended span a {
+        font-size: 21px;
+     }
     section.how-tos-inner-content{
         width: 33.33%;
     }
@@ -49,6 +79,28 @@
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1279px) {
+    section.recommended-inner-content {
+        height: 140px;
+    }
+    section.recommended-inner-content-elements {
+        max-width: 250px;
+    }
+    .homework-alert {
+        top: -12px;
+    }
+    section.recommended-container {
+        margin-top: 40px;
+    }
+    section.reminder-container {
+        display: flex;
+    }
+    
+section.recommended-content {
+    margin-top: 30px;
+}
+    section.txt-recommended span a {
+        font-size: 16px;
+     }
     section.how-tos-inner-content{
         width: 50%;
     }
@@ -130,7 +182,7 @@
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: #ffff;
+        background-color: #ffffff;
         box-shadow: 0 1px 12px 0 #E0E0E0;
         z-index: 10;
     }
@@ -170,6 +222,21 @@
 }
 
 @media only screen and (min-width: 1px) and (max-width: 599px) {
+    .homework-alert {
+        top: -5px;
+    }
+    section.reminder-container {
+        display: none;
+    }
+section.recommended-content {
+    margin-top: 20px;
+}
+    section.txt-recommended span a {
+        font-size: 12px;
+     }
+    span.btn.btn-english-training {
+        display: none;
+    }
     section.recommended-inner-content-elements {
         max-width: 235px;
     }
@@ -674,7 +741,6 @@ section.sidebar-inner-content, section.sidebar-learning-consultant {
 }
 
 section.reminder-container {
-    display: flex;
     background-color: #B4BFC1;
     color: #ffffff;
     border-radius: 24px;
@@ -709,13 +775,11 @@ section.recommended-container {
     align-items: center;
     justify-content: space-between;
     align-content: center;
-    margin-top: 40px;
 }
 
 section.txt-recommended span a {
     text-decoration: none;
     color: #C7CFD0;
-    font-size: 21px;
     font-weight: 700;
     line-height: 29px;
 }
@@ -818,10 +882,6 @@ section.recommended-inner-content:not(:last-child) {
     margin-right: 25px;
 }
 
-section.recommended-content {
-    margin-top: 30px;
-}
-
 section.recommended-content::-webkit-scrollbar {
     width: 5px;
     height: 5px
@@ -867,7 +927,7 @@ span.recommended-completed-activities {
 }
 
 span.recommended-title {
-    font-size: 13px;
+    font-size: 12px;
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -890,7 +950,6 @@ span.recommended-assigned-warning {
 .homework-alert {
     position: absolute;
     right: -5px;
-    top: -12px;
     display: block;
     background: #FF5F58;
     width: 15px;
@@ -899,7 +958,7 @@ span.recommended-assigned-warning {
     border-radius: 100%;
     font-size: 10px;
     font-weight: bold;
-    z-index: 999;
+    z-index: 5;
     color: #fff;
 }
 
@@ -914,6 +973,7 @@ span.howtos-loadmore-btn {
     border-radius: 24px;
     font-weight: 600;
     font-size: 12px;
+    cursor: pointer;
 }
 
 section.how-tos-load-more-container {
