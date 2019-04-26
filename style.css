@@ -720,12 +720,11 @@ span.profile-list-name {
 }
 
 .main-body{
-    width: 100%;
+    width: 70%;
 }
 
 aside.sidebar {
-    width: 100%;
-    max-width: 330px;
+    width: 30%;
 }
 
 section.sidebar-inner-content, section.sidebar-learning-consultant {
