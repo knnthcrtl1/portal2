@@ -25,7 +25,11 @@ section.recommended-content {
         display: none;
     }
     .main-body{
-        margin-left: 40px;
+        width: 70%;
+    }
+    aside.sidebar {
+        width: 30%;
+        margin-right: 40px;
     }
     section.how-tos-content > section:not(:nth-child(3n+3))  {
         padding-right: 30px;
@@ -65,7 +69,11 @@ section.recommended-content {
         display: none;
     }
     .main-body{
-        margin-left: 40px;
+        width: 70%;
+    }
+    aside.sidebar {
+        width: 30%;
+        margin-right: 30px;
     }
     section.how-tos-content > section:not(:nth-child(3n+3))  {
         padding-right: 30px;
@@ -467,6 +475,11 @@ header {
     position: relative;
 }
 
+span.header-nav-custom-logo {
+    border: 0px;
+    padding: 0px 22px 0px 0px;
+}
+
 .header-nav-profie .header-nav-dropdown li.show-dropdown {
     display: flex;
     align-items: center;
@@ -717,14 +730,6 @@ span.profile-list-name {
 .main-content {
     display: flex;
     height: 100%;
-}
-
-.main-body{
-    width: 70%;
-}
-
-aside.sidebar {
-    width: 30%;
 }
 
 section.sidebar-inner-content, section.sidebar-learning-consultant {
